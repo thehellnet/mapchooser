@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let gameMap of gameMaps" class="col-sm-12 col-md-6 col-lg-4">
+      <div class="card bg-light my-1">
+        <div class="card-header">
+          <div class="float-left">{{gameMap.name}}</div>
+          <div class="float-right"><span class="small">{{gameMap.tag}}</span></div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 col-xl-8">
+              <img src="{{gameMap.image}}" alt="{{gameMap.name}}" class="img-thumbnail rounded">
+            </div>
+            <div class="col-sm-4 col-md-5 col-xl-4 my-2">
+              <button class="btn btn-block btn-info" type="button">
+                <span class="fa fa-play-circle" aria-hidden="true"></span> WAR
+              </button>
+              <button class="btn btn-block btn-info" type="button">
+                <span class="fa fa-play-circle" aria-hidden="true"></span> DM
+              </button>
+              <button class="btn btn-block btn-info" type="button">
+                <span class="fa fa-play-circle" aria-hidden="true"></span> SD
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
