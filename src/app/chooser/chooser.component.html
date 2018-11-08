@@ -13,13 +13,13 @@
               <img src="{{gameMap.image}}" alt="{{gameMap.name}}" class="img-thumbnail rounded">
             </div>
             <div class="col-sm-4 col-md-5 col-xl-4 my-2">
-              <button class="btn btn-block btn-info" type="button">
+              <button class="btn btn-block btn-info" type="button" (click)="changeMap('war', gameMap.tag)">
                 <span class="fa fa-play-circle" aria-hidden="true"></span> WAR
               </button>
-              <button class="btn btn-block btn-info" type="button">
+              <button class="btn btn-block btn-info" type="button" (click)="changeMap('dm', gameMap.tag)">
                 <span class="fa fa-play-circle" aria-hidden="true"></span> DM
               </button>
-              <button class="btn btn-block btn-info" type="button">
+              <button class="btn btn-block btn-info" type="button" (click)="changeMap('sd', gameMap.tag)">
                 <span class="fa fa-play-circle" aria-hidden="true"></span> SD
               </button>
             </div>

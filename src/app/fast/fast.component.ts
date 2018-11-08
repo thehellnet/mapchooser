@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ApiService} from '../api.service';
 
 @Component({
   selector: 'app-fast',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FastComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api: ApiService) {
+  }
 
   ngOnInit() {
   }
 
+  mapRestart() {
+    this.api.mapRestart();
+  }
+
+  fastRestart() {
+    this.api.fastRestart();
+  }
+
+  sendMessage(message: string) {
+    this.api.sendMessage(message);
+  }
 }

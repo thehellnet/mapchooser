@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -9,7 +10,7 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
 
 import {MapbuttonComponent} from './mapbutton/mapbutton.component';
 import {ChooserComponent} from './chooser/chooser.component';
-import { FastComponent } from './fast/fast.component';
+import {FastComponent} from './fast/fast.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FastComponent } from './fast/fast.component';
     NgbModule,
     AngularFontAwesomeModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

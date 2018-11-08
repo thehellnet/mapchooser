@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {GameMap} from '../../models/gamemap';
+import {ApiService} from '../api.service';
 
 @Component({
   selector: 'app-chooser',
@@ -29,10 +30,13 @@ export class ChooserComponent implements OnInit {
     new GameMap('Winter Crash', 'mp_crash_snow', 'assets/cod4_maps/winter_crash.jpg'),
   ];
 
-  constructor() {
+  constructor(private api: ApiService) {
   }
 
   ngOnInit() {
   }
 
+  changeMap(gametype: string, mapTag: string) {
+    this.api.changeMap(gametype, mapTag);
+  }
 }

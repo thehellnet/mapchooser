@@ -1,8 +1,43 @@
-<div class="container-fluid my-1">
-  <button class="btn btn-outline-danger col-12 col-sm-6 my-1" type="button">
-    <span class="fa fa-play-circle" aria-hidden="true"></span> MAP RESTART
-  </button>
-  <button class="btn btn-outline-warning col-12 col-sm-6 my-1" type="button">
-    <span class="fa fa-play-circle" aria-hidden="true"></span> FAST RESTART
-  </button>
+<div class="container-fluid col-12 p-2 my-2">
+  <div class="row">
+    <div class="col-sm-12 col-md-4 my-1">
+      <button class="btn btn-outline-danger w-100" type="button" (click)="mapRestart()">
+        <span class="fa fa-refresh" aria-hidden="true"></span> MAP RESTART
+      </button>
+    </div>
+    <div class="col-sm-12 col-md-4 my-1">
+      <button class="btn btn-outline-warning w-100" type="button" (click)="fastRestart()">
+        <span class="fa fa-flash" aria-hidden="true"></span> FAST RESTART
+      </button>
+    </div>
+    <div class="col-sm-12 col-md-4 my-1">
+      <button class="btn btn-outline-secondary w-100" type="button" data-toggle="modal" data-target="#sendMessage">
+        <span class="fa fa-comment" aria-hidden="true"></span> SEND MESSAGE
+      </button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="sendMessage" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Send message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Message</span>
+          </div>
+          <input #textMessage type="text" class="form-control" placeholder="type a text...">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="sendMessage(textMessage.value)">Send</button>
+      </div>
+    </div>
+  </div>
 </div>
